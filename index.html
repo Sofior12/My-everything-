@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Bio</title>
 
+<style>
+body {
+  margin: 0;
+  background: #0f0f0f;
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.profile {
+  margin-top: 50px;
+}
+
+.profile img {
+  width: 110px;
+  border-radius: 50%;
+  border: 3px solid lime;
+}
+
+.link {
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.link:hover {
+  background: lime;
+  color: black;
+}
+
+/* counter */
+.counter {
+  margin-top: 20px;
+  font-size: 14px;
+  color: lime;
+}
+</style>
+</head>
+
+<body>
+
+<div class="profile">
+  <img src="https://i.imgur.com/6VBx3io.png">
+  <h1>Sofior 😈</h1>
+</div>
+
+<a class="link" onclick="countClick()" href="https://instagram.com">📸 Instagram</a>
+<a class="link" onclick="countClick()" href="https://t.me/">💬 Telegram</a>
+<a class="link" onclick="countClick()" href="https://youtube.com">📺 YouTube</a>
+
+<div class="counter">
+  Total Clicks: <span id="clicks">0</span>
+</div>
+
+<!-- 🔊 Background Music -->
+<audio id="bgm" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<script>
+// play music after tap
+document.body.addEventListener("click", function(){
+  document.getElementById("bgm").play();
+}, {once:true});
+
+// click counter
+let count = localStorage.getItem("clickCount") || 0;
+document.getElementById("clicks").innerText = count;
+
+function countClick(){
+  count++;
+  localStorage.setItem("clickCount", count);
+}
+</script>
+
+</body>
+</html>
