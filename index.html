@@ -2,92 +2,109 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sofior Bio</title>
+<title>App UI Bio</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
   margin: 0;
-  height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #0a0a0a;
   color: white;
 }
 
-/* main box */
-.container {
-  width: 90%;
-  max-width: 350px;
-  padding: 25px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
+/* top header */
+.header {
+  padding: 20px;
   text-align: center;
-  box-shadow: 0 0 30px rgba(0,255,0,0.2);
+  background: linear-gradient(45deg, #00ffcc, #6a00ff);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 /* profile */
 .profile img {
-  width: 100px;
+  width: 80px;
   border-radius: 50%;
-  border: 3px solid lime;
+  border: 3px solid white;
 }
 
-h1 {
+.profile h2 {
   margin: 10px 0;
 }
 
-/* neon button */
-.link {
-  display: block;
-  margin: 15px 0;
+/* cards */
+.card {
+  margin: 15px;
   padding: 15px;
-  border-radius: 30px;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(45deg, #00ffcc, #00ff66);
-  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ff66;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
-.link:hover {
+.card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ff66;
+  background: rgba(255,255,255,0.1);
 }
 
-/* special button */
-.main-btn {
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 30px;
-  background: #6a00ff;
-  box-shadow: 0 0 20px #6a00ff, 0 0 40px #6a00ff;
+/* links */
+.link {
   display: block;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
   text-decoration: none;
   color: white;
+  background: linear-gradient(45deg, #00ffcc, #00ff66);
+  text-align: center;
+}
+
+/* bottom nav */
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
+<!-- Header -->
+<div class="header">
   <div class="profile">
     <img src="https://i.imgur.com/6VBx3io.png">
-    <h1>Sofior 😈</h1>
-    <p>Follow me everywhere 👇</p>
+    <h2>Sofior 😈</h2>
+    <p>Welcome to my app</p>
   </div>
+</div>
 
+<!-- Main Content -->
+<div class="card">
   <a class="link" href="#">📸 Instagram</a>
   <a class="link" href="#">💬 Telegram</a>
   <a class="link" href="#">📺 YouTube</a>
   <a class="link" href="#">💸 Earn Money</a>
+</div>
 
-  <a class="main-btn" href="#">🚀 Get Started</a>
-
+<!-- Bottom Navigation -->
+<div class="nav">
+  <a href="#">🏠</a>
+  <a href="#">📊</a>
+  <a href="#">💬</a>
+  <a href="#">⚙️</a>
 </div>
 
 </body>
